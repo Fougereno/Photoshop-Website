@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+.app {
+    overflow: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+.vhblock {
+    height: 100vh; 
+}
+.section {
+    height: 100%;
+    background: url(../img/фон.png) no-repeat center center;
+    background-size: cover;
+}
+.section_2 {
+    background-size: contain;
+}
+.section_dark {
+    background-color: #2e3b4e;
+    min-height: 200px;
+}
+.section_red {
+    background-color: #e7526b;
+    min-height: 200px;
+}
+.section_violet {
+    background: rgba(79, 88, 138, 0.5);
+}
+.wrapper {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+.wrapper_820 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: space-between;
+    max-width: 820px;
+    margin: 0 auto;
+}
+.wrapper_500 {    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;    
+    max-width: 500px;
+    margin: 0 auto;
+}
+.wrap_white {
+    display: flex;
+}
+.header, .header__menu, .header__logo {
+    display: flex;
+    color: #fff;
+    text-align: center;
+    justify-content: space-between;
+}
+.header__menu a {
+    color: #fff;
+    text-decoration: none;
+}
+.header__item {
+    padding: 0 24px;    
+}
+.section_left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 50%;
+}
+.section_left__text {
+    color: #fff;
+    font-family: 'Open sans', Arial, Helvetica;
+    font-size: 30px;
+}
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    padding: 22px 60px;
+    background-color: #8824cd;
+    color: #fff;
+    border-radius: 30px;
+}
+.text_dark {
+    width: 50%;
+    padding: 5px 30px;
+    color: #fff;
+    font-family: 'Open sans', Arial, Helvetica;
+    line-height: 1.5;
+}
+.text_red {
+    padding: 5px 30px;
+    color: #fff;
+    font-family: 'Open sans', Arial, Helvetica;
+    line-height: 1.5;
+}
+.img {
+    width:500px
+}
