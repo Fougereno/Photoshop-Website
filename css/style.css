@@ -22,10 +22,12 @@
 }
 .section_forest {
     background: url('../img/звезды.png') no-repeat 50% 80%;
+    background-size: cover;
 }
 .section_mount {
     background: url('../img/горы.png') no-repeat center center;
     padding-top: 95px;
+    background-size: cover;
 }
 .section_hand {
     display: flex;
@@ -33,6 +35,7 @@
     flex-direction: column;
     justify-content: flex-end;
     background: url('../img/рука.png') no-repeat 50% 60%;
+    background-size: cover;
 }
 .section_gradient {
     width: 100%;
@@ -93,7 +96,21 @@
     justify-content: space-between;
 }
 .header {
+    display: flex;
+    flex-direction: column;
     height: 100px;
+}
+.header__wrap {
+    width: 1180px;
+    margin: 0 auto;
+    height: 0;
+}
+.header__logo {
+    height: 100px;
+    justify-content: flex-start;
+}
+.header__menu {
+    margin-left: auto;
     padding: 30px;
 }
 .header__menu a {
@@ -218,4 +235,54 @@
 }
 .h3 {
     font-size: 35px;
+}
+@media screen and (max-width: 1143px) {
+    .header__wrap {
+        width: 850px;
+    }
+    .header__item {
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .header__item_logo {
+        display: none;
+    }
+    .header__wrap {
+        padding-left: 20px;
+    }
+    .section_left {
+        padding-left: 10px;
+    }
+    .section_left__head {
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .btn {
+        padding: 15px 40px;
+        font-size: 15px;
+    }
+    .section_left__head {
+        padding-bottom: 20px;
+    }
+    .section_left__text {
+        padding: 10px 15px;
+    }
+}
+@media screen and (max-width: 670px) {
+    .header__item {
+        display: none;
+    }
+    .section_left {
+        justify-content: center;
+        align-items: center;
+        padding-left: 90px;
+        text-align: center;
+        padding-bottom: 150px;
+        width: 80%;
+        padding-bottom: 150px;
+    }
 }
