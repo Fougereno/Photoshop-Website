@@ -19,7 +19,7 @@
 }
 .section_dark {
     background-color: #2e3b4e;
-    min-height: 200px;
+    min-height: 370px;
 }
 .section_forest {
     background: url('../img/звезды.png') no-repeat 50% 80%;
@@ -50,11 +50,31 @@
     height: 50%;
 }
 .section_red {
-    background: rgba(231, 82,107, 0.8);
+    background: #e7526b;
     min-height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+#element {
+    background: rgba(231, 82,107, 0.8);
+}
+#element::before {
+    content: "";
+    position: relative;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #2e3b4e;
+    background-color: #2e3b4e;
+    top: -55px;
+    border-radius: 0px 0px 60px 0px;
+    display: flex;
+    align-self: center;
+    transform: rotate(45deg);
 }
 .section_violet {
     background: rgba(82, 26, 102, 0.8);
+    padding-top: 55px;
 }
 .wrapper {
     display: flex;
@@ -86,7 +106,6 @@
     height: 100%;    
     max-width: 520px;
     margin: 0 auto;
-    padding-top: 95px;
 }
 .wrap_white {
     display: flex;
@@ -121,7 +140,8 @@
 }
 .header__menu {
     margin-left: auto;
-    padding: 30px;
+    padding: 0 30px;
+    height: 100%;
 }
 .header__menu a {
     color: #fff;
@@ -161,6 +181,11 @@
     background-color: #fff;
     color: #626262;
     border-radius: 30px;
+    transition: box-shadow;
+    transition-duration: 1s;
+}
+.header__form:hover {
+    box-shadow: 0px 0px 7px #fff;
 }
 .header__text:hover {
     border-color: #fff;
@@ -189,7 +214,7 @@
     font-family: 'Open sans', Arial, Helvetica;
     padding-bottom: 60px;
     font-size: 12px;
-    padding: 20px 15px;
+    padding: 20px;
 }
 .btn {
     display: inline-flex;
@@ -203,6 +228,7 @@
     border-radius: 40px;
     border-top: 1px solid #b87ce1;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
 }
 .btn_white {
     background-color: #fff;
@@ -218,13 +244,15 @@
     width: 135px;
     font-size: 13px;
 }
-.text, .text a {
+.text, .link {
     color: #fff;
     font-family: 'Open sans', Arial, Helvetica;
     line-height: 1.5;
     font-size: 15px;
-    padding:0 5px 35px 0;
-    text-decoration: none;
+    padding-bottom: 35px;
+}
+.link {
+    padding-top: 35px;
 }
 .text_400 {
     max-width: 400px;
@@ -232,6 +260,10 @@
 .text__text {
     font-size: 19px;
     padding-bottom: 40px;
+    font-weight: 400;
+}
+.text_small {
+    font-weight: 400;
 }
 .section__text_100 {
     width: 100%;
@@ -241,7 +273,7 @@
     font-weight: 600;
 }
 .text__head_black {
-    padding-bottom: 20px;
+    padding-bottom: 15px;
 }
 .section__head_dark {
     padding: 35px 0;
@@ -251,7 +283,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 125px 0 195px 0;
+    padding: 60px 0 195px 0;
     color: #fff;
     font-family: 'Open sans', Arial, Helvetica;
     line-height: 1.5;
@@ -265,7 +297,7 @@
     padding: 30px 0 35px 0;
 }
 .text_violet__text {
-    width: 740px;
+    max-width: 740px;
     color: #a87bb7;
     padding: 30px 0 35px 0;
     font-size: 20px;
@@ -276,11 +308,17 @@
     padding: 95px 0 135px 0;
     margin-left: auto;
 }
+.text_black-left {
+    margin-left: 0;
+}
 .text_black-right {
     margin: auto;
 }
 .text__15 {
     line-height: 1.5;
+}
+.text_35 {
+    padding-bottom: 35px;
 }
 .h3 {
     font-size: 35px;
@@ -304,7 +342,7 @@
 }
 .author__img {
     height: 45px;
-    width: 45px;
+    width: 55px;
     padding-right: 10px;
 }
 .author__img img {
@@ -320,11 +358,28 @@
     background: url(../img/ручка.png) no-repeat center left;
     background-size: cover;
 }
+.image_watch {
+    position: absolute;
+    height: 500px;
+    width: 35%;
+    background: url(../img/часы.png) no-repeat center right;
+    background-size: cover;
+    left: 65%;;
+}
 .section_80 {
-    padding: 80px 0 230px 0;
+    padding-top: 80px;
+    height: 100%;
 }
 .section_45 {
     padding-top: 45px;
+}
+@media screen and (max-width: 1210px) {
+    .text_black-left {
+        padding-left: 15px;
+    }
+    .section_80, .section_45 {
+        padding-left: 15px;
+    }
 }
 @media screen and (max-width: 1143px) {
     .header__wrap {
@@ -335,11 +390,58 @@
         align-items: center;
         padding: 0 12px;
     }
-    .image, .wrapper_fixed {
+    .image, .image_watch, .wrapper_fixed {
         height: 400px;
     }
     .wrapper_hand {
         padding-left: 15px;
+    }
+    .text_black, .text_400 {
+        padding-top: 50px;
+        padding-right: 15px;
+        max-width: 600px;
+    }
+}
+@media screen and (max-width: 1030px) {
+    .text__text, .text_small {
+
+    }
+    .text__text {
+        font-size: 16px;
+    }
+    .text_small {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 960px) {
+    .wrap_white, .wrap_white_2 {
+        flex-direction: column;
+    }
+    .image {
+        position: relative;
+        width: auto;       
+        background-size: cover;
+    }
+    .image_watch {
+        background: url(../img/часы.png) no-repeat top center;
+        background-size: cover;
+        position: relative;
+        width: 100%; 
+        left: auto;
+    }
+    .wrapper_fixed {
+        height: auto;
+        width: auto;
+    }
+    .text__head {
+        padding: 20px 0;
+    }
+    .text_black {
+        padding-bottom: 70px;
+    }
+    .section_45 {
+        max-width: 600px;
+        padding-right: 15px;
     }
 }
 @media screen and (max-width: 900px) {
@@ -360,20 +462,6 @@
         flex-direction: column;
         align-items: center;
     }
-    .text__head {
-        padding: 20px 0;
-    }
-   .wrap_white {
-       flex-direction: column;
-   }
-   .image {
-       position: relative;
-       width: auto;       
-       background-size: cover;
-   }
-   .wrapper_fixed {
-       height: auto;
-   }
 }
 @media screen and (max-width: 800px) {
     .btn {
@@ -389,6 +477,14 @@
     .section_left__text {
         padding: 10px 15px;
     }
+    .text_black {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .text_violet__text {
+        padding-left:15px;
+        padding-right:15px;
+    }
 }
 @media screen and (max-width: 670px) {
     .header__item {
@@ -402,6 +498,15 @@
         padding-bottom: 150px;
         width: 80%;
         padding-bottom: 150px;
+    }  
+    .text_red {
+        padding-bottom: 120px;
+    }
+    .text_violet {
+        padding-bottom: 0;
+    }
+    .text_red__text {
+        padding-bottom: 90px;
     }
 }
 @media screen and (max-width: 550px) {
@@ -414,15 +519,24 @@
     .btn_white {
         min-width:230px;
     }
+    .hand__head {
+        font-size: 30px;
+        padding: 15px 0;
+    }
+    .hand {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .wrapper_hand {
+        padding: 0 10px;
+    }
 }
 @media screen and (max-width: 460px) {
     .text {
         max-width: 300px;
-    }    
-    .text_red {
-        padding-bottom: 120px;
-    }
-    .text_red__text {
-        padding-bottom: 90px;
+    }  
+    .image_watch {
+        background: url(../img/часы.png) no-repeat 80% 0%;
     }
 }
