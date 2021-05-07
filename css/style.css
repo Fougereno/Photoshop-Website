@@ -11,6 +11,9 @@
 }
 .section {
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     background: url(../img/фон.png) no-repeat center center;
     background-size: cover;
 }
@@ -83,6 +86,7 @@
 .wrapper {
     display: flex;
     height: 100%;
+    width: 100%;
     flex-direction: column;
     justify-content: space-between;
     max-width: 1180px;
@@ -256,6 +260,15 @@
 .link {
     padding-top: 35px;
 }
+.fa-search {
+    position: absolute;
+    color: #222;
+    align-self: center;
+    margin-left: 650px;
+}
+.text_dark {
+    width: 45%;
+}
 .text_400 {
     max-width: 400px;
 }
@@ -387,6 +400,9 @@
     }
 }
 @media screen and (max-width: 1143px) {
+    .fa-search {
+        margin-left: 530px;
+    }
     .header__wrap {
         width: 850px;
     }
@@ -463,10 +479,6 @@
         font-size: 38px;
         font-weight: 400;
     }
-    .wrapper_820 {
-        flex-direction: column;
-        align-items: center;
-    }
 }
 @media screen and (max-width: 800px) {
     .button {
@@ -490,6 +502,12 @@
         padding-left:15px;
         padding-right:15px;
     }
+    #element::after {
+        width: 70px;
+        height: 70px;
+        top: 38px;
+        border-radius: 0px 0px 50px 0px;
+    }
 }
 @media screen and (max-width: 670px) {
     .header__item {
@@ -510,10 +528,14 @@
     .text_red__text {
         padding-bottom: 90px;
     }
+    .fa-search {        
+        margin-left: 175px;
+    }
 }
 @media screen and (max-width: 550px) {
     .h3 {
         font-size: 30px;
+        padding: 0 15px;
     }
     .text_red__text {
         padding: 15px 35px;
@@ -533,6 +555,14 @@
     .wrapper_hand {
         padding: 0 10px;
     }
+    .wrapper_820 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .text_dark {
+        width: 100%;
+        padding-left: 15px;
+    }
 }
 @media screen and (max-width: 460px) {
     .text {
@@ -547,5 +577,23 @@
     .section_left {
         justify-content: space-around;
         padding: 0;
+    }
+    .section_hand {
+        height: 570px;
+    }
+    .section_hand .section_gradient {
+        height: 70%;
+    }
+    .section_dark {
+        min-height: 300px;
+    }
+    .section_red-transparent {
+        padding-top: 0;
+    }
+    .text_red {
+        padding-bottom: 0;
+    }
+    .text_dark {
+        padding: 15px 15px;
     }
 }
